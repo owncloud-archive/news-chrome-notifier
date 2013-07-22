@@ -1,0 +1,48 @@
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+p {
+	color: gray;
+}
+
+form {
+	margin: 0 auto;
+	width: 400px;
+	padding: 14px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+	width: 140px;
+	float: left;
+}
+
+input {
+	float: left;
+	font-size: 12px;
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	width: 200px;
+	margin: 2px 0 20px 10px;
+}
+
+input.check {
+	width: 30px;
+}
+
+button {
+	clear: both;
+	margin-left: 150px;
+	width: 125px;
+	height: 31px;
+	background: #666666;
+	text-align: center;
+	line-height: 31px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+}

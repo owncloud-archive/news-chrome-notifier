@@ -1,0 +1,19 @@
+{
+   "owncloudnewscheck_description": {
+      "message": "Displays the number of unread messages in your ownCloud News App. You can also click the button to open your feeds."
+   },
+   "owncloudnewscheck_exception": {
+      "message": "exception: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "owncloudnewscheck_name": {
+      "message": "ownCloud News Checker"
+   },
+   "owncloudnewscheck_node_error": {
+      "message": "Error: feed retrieved, but no &lt;unreadCount&gt; attribute found"
+   }
+}
