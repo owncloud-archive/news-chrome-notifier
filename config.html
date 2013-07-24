@@ -4,10 +4,43 @@
 		<script src="config.js"></script>
 	</head>
 	<body>
-		<form id="form" action="">
-			<label>Owncloud New URL: </label><input type="text" id="url" /><br><br><br>
-			<p>Hint, should look something like: https://owncloud.mysite.com/index.php/apps/news/</p>
-			<button type="submit">Save</button>
+		<form id="form" action="" autocomplete="off">
+			<table border=0>
+				<tr>
+					<td colspan=2><h1>Configure ownCloud News Checker</h1></td>
+				</tr>
+				<tr>
+					<td colspan=2><br></td>
+				</tr>
+				<tr>
+					<td colspan=2><div>Enter the URL where you access your News app, this should look something like: https://owncloud.mysite.com/index.php/apps/news/</div></td>
+				</tr>
+				<tr>
+					<td><label>ownCloud News URL</label></td>
+					<td><input type="text" id="url" /></td>
+				</tr>
+				<tr>
+					<td colspan=2><br></td>
+				</tr>
+				<tr>
+					<td colspan=2><div>The following fields are optional. If you don't supply values, the browser cookies will be used to authenticate.</div></td>
+				</tr>
+				<tr>
+					<td><label>Username</label></td>
+					<td><input type="text" id="username" /></td>
+				</tr>
+				<tr>
+					<td><label>Password</label></td>
+					<td><input type="password" id="password" /></td>
+				</tr>
+				<tr>
+					<td colspan=2><br></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button type="submit">Save</button></td>
+				</tr>
+			</table>
 		</form>
 	</body>
 </html>

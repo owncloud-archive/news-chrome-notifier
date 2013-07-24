@@ -15,5 +15,5 @@
    "name": "__MSG_owncloudnewscheck_name__",
    "options_page": "config.html",
    "permissions": [ "alarms", "tabs", "webNavigation", "*://*/*" ],
-   "version": "0.1"
+   "version": "0.2"
 }

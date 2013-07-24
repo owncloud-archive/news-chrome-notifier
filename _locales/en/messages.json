@@ -13,7 +13,16 @@
    "owncloudnewscheck_name": {
       "message": "ownCloud News Checker"
    },
+   "owncloudnewscheck_url_error": {
+      "message": "No ownCloud URL configured"
+   },
+   "owncloudnewscheck_login_error": {
+      "message": "Error: ownCloud authentication failed"
+   },
+   "owncloudnewscheck_ajax_error": {
+      "message": "Error: Ajax query return with unknown status code"
+   },
    "owncloudnewscheck_node_error": {
-      "message": "Error: feed retrieved, but no &lt;unreadCount&gt; attribute found"
+      "message": "Error: Either <feed> or <unreadCount> attribute not found"
    }
 }

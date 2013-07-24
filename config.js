@@ -1,8 +1,13 @@
 function start() {
-	var input = document.getElementById("url");
+	var url_input = document.getElementById("url");
+	var un_input = document.getElementById("username");
 	var url = localStorage["oc_url"];
+	var un = localStorage["oc_un"];
 	if (url != null) {
-		input.value = url;
+		url_input.value = url;
+	}
+	if (un != null) {
+		un_input.value = un;
 	}
 	var form = document.getElementById("form");
 	form.addEventListener("submit", handleClick);
@@ -15,8 +20,9 @@ function handleClick(event) {
 		url = url + "/";
 	}
 	localStorage["oc_url"] = url;
+	localStorage["oc_un"] = document.getElementById("username").value;
+	localStorage["oc_pw"] = document.getElementById("password").value;
 	event.preventDefault();
 }
 
 document.addEventListener('DOMContentLoaded', start);
-
