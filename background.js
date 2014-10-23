@@ -246,8 +246,21 @@ function drawIconAtRotation() {
 
 function goToInbox() {
 	if ((localStorage['oc_url'] == '') || (!localStorage.hasOwnProperty('oc_url'))) {
-		alert(chrome.i18n.getMessage("owncloudnewscheck_url_error"));
-		console.log(chrome.i18n.getMessage("owncloudnewscheck_url_error"));
+
+	  chrome.tabs.query({}, function (tabs) {
+	    var i, tab;
+			for (i = 0; tab = tabs[i]; i++) {
+				if (tab.url && isExtOptionPageUrl(tab.url)) {
+					console.log('Found ownCloud extension option tab: ' + tab.url + '. ' +
+											'Focusing and refreshing count...');
+					chrome.tabs.update(tab.id, {selected: true});
+					return;
+				}
+			}
+			console.log('Could not find ownCloud extension option tab. Creating one...');
+			chrome.tabs.create({ url: getExtOptionPageUrl() });
+		});
+
 	} else {
 		if (!backgroundStarted) {
 			console.log('Background not yet started, starting...');
@@ -268,6 +281,17 @@ function goToInbox() {
 			chrome.tabs.create({url: getOwnCloudNewsUrl()});
 		});
 	}
+}
+
+function getExtOptionPageUrl() {
+	// Return the option page URL of the extension
+	return chrome.runtime.getManifest().options_page;
+}
+
+function isExtOptionPageUrl(url) {
+	// Return whether the URL is the option page of the extension
+	var optUrl = chrome.runtime.id + '/' + getExtOptionPageUrl();
+	return (url.indexOf(optUrl) > -1);
 }
 
 function onInit() {
